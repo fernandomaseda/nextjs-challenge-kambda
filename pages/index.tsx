@@ -17,9 +17,9 @@ import Image from 'next/image';
 import Theme from '@config/theme';
 
 export type stateType = {
-  search: string;
-  origin: string | null; //place_of_origin
-  selectedId: string | null;
+  search: string; // search input
+  origin: string | null; // place_of_origin selected from category
+  selectedId: string | null; // id selected from card list to view detail (open modal)
   limit: number;
   page: number;
 };

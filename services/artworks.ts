@@ -1,7 +1,13 @@
 import { useQuery } from '@tanstack/react-query'
 
 
-const API = 'https://api.artic.edu/api/v1'
+const API = process.env.NEXT_PUBLIC_API_URL ?? false;
+
+if (!API) {
+  throw new Error(
+    'Please define the NEXT_PUBLIC_API_URL environment variable inside .env'
+  )
+}
 
 // QUERIES
 //-------------------------------------------------------------------------------
