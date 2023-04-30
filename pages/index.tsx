@@ -8,11 +8,11 @@ import {
   ItemMenu,
   Count,
   Search,
+  Modal,
 } from '@components';
 import React, { useState, ChangeEvent, useMemo, useCallback, useEffect } from 'react';
 import { GeneralLayout } from '@layout';
 import { useArtworksQuery, useArtworkDetailsQuery } from '@services/artworks';
-import Modal from '@components/Modal';
 import Image from 'next/image';
 import Theme from '@config/theme';
 

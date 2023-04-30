@@ -1,13 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
+import { API } from '@config/constants'
 
-
-const API = process.env.NEXT_PUBLIC_API_URL ?? false;
-
-if (!API) {
-  throw new Error(
-    'Please define the NEXT_PUBLIC_API_URL environment variable inside .env'
-  )
-}
 
 // QUERIES
 //-------------------------------------------------------------------------------

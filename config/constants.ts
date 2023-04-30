@@ -1,18 +1,8 @@
-export const cardDashboardStatusOptions = [
-  {
-    value: 'CREATED',
-    label: 'Created',
-    icon: {
-      type: 'created',
-      color: 's_40',
-    },
-  },
-  {
-    value: 'PENDING',
-    label: 'Pending',
-    icon: {
-      type: 'pending',
-      color: 'warning',
-    },
-  }
-];
+
+export const API = process.env.NEXT_PUBLIC_API_URL ?? false;
+
+if (!API) {
+  throw new Error(
+    'Please define the NEXT_PUBLIC_API_URL environment variable inside .env'
+  )
+}
