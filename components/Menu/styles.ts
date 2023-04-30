@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { layout, space } from 'styled-system';
+import type {ItemMenuProps} from './ItemMenu';
 
 export const Item = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const Item = styled.div`
   ${space}
 `;
 
-export const ItemButton = styled.button`
+export const ItemButton = styled.button<Partial<ItemMenuProps> & {view: boolean}>`
     width: 100%;
     border-radius: 0;
     background: ${({ theme: { colors } }) => colors.white};

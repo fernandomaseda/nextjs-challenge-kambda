@@ -3,7 +3,7 @@ import Text from '@components/Text';
 import { Item, ItemButton } from './styles';
 import { SpaceProps, LayoutProps } from 'styled-system';
 
-interface ItemMenuProps extends LayoutProps, SpaceProps {
+export interface ItemMenuProps extends LayoutProps, SpaceProps {
   action: {
     onClick: () => void;
     text: string;
