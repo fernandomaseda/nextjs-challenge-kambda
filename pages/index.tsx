@@ -151,7 +151,13 @@ const Home = () => {
         <Box width="100%">
           <Box display="flex" justifyContent="space-between" alignItems="center" mb="1.25rem">
             <Box display="flex" alignItems="center">
-              <Text fontSize="1.125rem" color="black" fontWeight="bold" loading={listLoading}>
+              <Text
+                as="h3"
+                fontSize="1.125rem"
+                color="black"
+                fontWeight="bold"
+                loading={listLoading}
+              >
                 {origin || 'All'}
               </Text>
               <Count ml={3} number={filteredListData.length} loading={listLoading} />
@@ -261,7 +267,7 @@ const Home = () => {
             )}
             {detailData && (
               <>
-                <Text fontSize="lg" color="black" fontWeight="bold" pb={24}>
+                <Text as="h2" fontSize="lg" color="black" fontWeight="bold" pb={24}>
                   {detailData?.data?.title}
                 </Text>
                 <Box>

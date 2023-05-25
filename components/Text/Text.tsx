@@ -3,10 +3,22 @@ import Truncate from 'react-truncate';
 import Skeleton from 'react-loading-skeleton';
 import Theme from '@config/theme';
 import { StyledText } from './styles';
-import { SpaceProps, DisplayProps, LayoutProps, TextAlignProps } from 'styled-system';
+import {
+  SpaceProps,
+  DisplayProps,
+  LayoutProps,
+  TextAlignProps,
+  TypographyProps,
+} from 'styled-system';
 
-export interface TextProps extends SpaceProps, DisplayProps, LayoutProps, TextAlignProps {
+export interface TextProps
+  extends SpaceProps,
+    DisplayProps,
+    LayoutProps,
+    TextAlignProps,
+    TypographyProps {
   children: ReactNode;
+  as?: keyof JSX.IntrinsicElements;
   color?: string;
   fontSize?: string | number;
   fontFamily?: string;
@@ -27,6 +39,7 @@ export interface TextProps extends SpaceProps, DisplayProps, LayoutProps, TextAl
 
 const Text: FC<TextProps> = ({
   children,
+  as = 'p',
   loading = false,
   color = 'inherit',
   fontSize = 'rg',
@@ -44,6 +57,7 @@ const Text: FC<TextProps> = ({
   }
   return (
     <StyledText
+      as={as}
       color={color}
       fontSize={fontSize}
       fontFamily={fontFamily}

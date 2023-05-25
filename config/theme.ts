@@ -17,7 +17,7 @@ const fontSizes = [
   '3.375rem',
 ]
 
-const fontWeights = [300, 400, 600, 800, 900];
+const fontWeights = [300, 400, 600, 700, 800, 900];
 
 const space = [
   '0rem', // 0
@@ -65,8 +65,9 @@ baseTheme.fontSizes.xs = fontSizes[1]; // 12px
 baseTheme.fontSizes.xxs = fontSizes[0]; // 10px
 
 // Binding font weights aliases
-baseTheme.fontWeights.black = fontWeights[4]; // 900
-baseTheme.fontWeights.extra_bold = fontWeights[3]; // 800
+baseTheme.fontWeights.black = fontWeights[5]; // 900
+baseTheme.fontWeights.extra_bold = fontWeights[4]; // 800
+baseTheme.fontWeights.bold = fontWeights[3]; // 700
 baseTheme.fontWeights.semi_bold = fontWeights[2]; // 600
 baseTheme.fontWeights.regular = fontWeights[1]; // 400
 baseTheme.fontWeights.light = fontWeights[0]; // 300
